@@ -4,7 +4,18 @@ $('.parts-slider').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 1000,
-  speed: 2500,
+        arrows: false,
+        speed: 2500,
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+      }
+    }
+  ]
 });
 
 var map;
