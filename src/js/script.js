@@ -4,15 +4,14 @@ $('.parts-slider').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 1000,
-        arrows: false,
-        speed: 2500,
-  responsive: [
+  arrows: false,
+  speed: 2500,
+    responsive: [
     {
       breakpoint: 576,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-        dots: true,
       }
     }
   ]
@@ -42,7 +41,7 @@ const closeModal = () => {
 }
 document.addEventListener('click', e => {
   if (e.target.classList.contains('modal')) {
-closeModal()
+    closeModal()
   }
 })
 
