@@ -6,26 +6,26 @@ $('.parts-slider').slick({
   autoplaySpeed: 1000,
   arrows: false,
   speed: 2500,
-    responsive: [
+  responsive: [
     {
       breakpoint: 576,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-      }
-    }
-  ]
-});
+      },
+    },
+  ],
+})
 
-var map;
+var map
 
 DG.then(function () {
   map = DG.map('map', {
     center: [42.894974, 74.627809],
-    zoom: 18
-  });
-  DG.marker([42.895058, 74.627812]).addTo(map).bindPopup('Мы находимся здесь');;
-});
+    zoom: 18,
+  })
+  DG.marker([42.895058, 74.627812]).addTo(map).bindPopup('Мы находимся здесь')
+})
 
 const modalBtn = document.querySelector('.modal__btn')
 const modal = document.querySelector('.modal')
@@ -39,7 +39,7 @@ const closeModal = () => {
   modal.classList.remove('active')
   document.body.classList.remove('overflow-hidden')
 }
-document.addEventListener('click', e => {
+document.addEventListener('click', (e) => {
   if (e.target.classList.contains('modal')) {
     closeModal()
   }
