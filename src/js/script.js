@@ -41,9 +41,10 @@ var map
 DG.then(function () {
   map = DG.map('map', {
     center: [42.894974, 74.627809],
-    zoom: 18,
+    zoom: 13,
   })
-  DG.marker([42.895058, 74.627812]).addTo(map).bindPopup('Мы находимся здесь')
+  const marker = DG.marker([42.895058, 74.627812]).addTo(map)
+  marker.bindLabel('<p>г.Бишкек, ул.Осмонкулова Бчк Древесная 70/3</p><p>0555-77-65-03, 0550-47-20-71</p><p>Eжедневно с 9:00 до 21:00</p>', { static: true, className: 'map-hint', offset: DG.point(-150, -170) })
 })
 
 const modalBtn = document.querySelector('.modal__btn')
