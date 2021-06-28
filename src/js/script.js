@@ -21,9 +21,9 @@ $('.services-slider').slick({
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  // autoplay: true,
+  autoplay: true,
+  dots: true,
   autoplaySpeed: 3000,
-  arrows: false,
   speed: 1500,
   responsive: [
     {
